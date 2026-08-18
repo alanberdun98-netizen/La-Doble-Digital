@@ -1,0 +1,706 @@
+/*=========================================
+    RESET
+=========================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f4f4f4;
+    color:#222;
+    line-height:1.6;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+ul{
+    list-style:none;
+}
+
+button,
+input{
+    font-family:inherit;
+}
+
+/*=========================================
+    VARIABLES
+=========================================*/
+
+:root{
+
+    --rojo:#a3bd0f;
+    --rojo-hover:#c8e28b;
+
+    --negro:#181818;
+
+    --gris:#6d6d6d;
+
+    --blanco:#fff;
+
+    --borde:#dddddd;
+
+    --sombra:0 5px 15px rgba(0,0,0,.08);
+
+    --radio:8px;
+
+}
+
+/*=========================================
+    HEADER
+=========================================*/
+
+header{
+
+    background:white;
+
+    position:sticky;
+
+    top:0;
+
+    z-index:999;
+
+    box-shadow:var(--sombra);
+
+}
+
+/*=========================================
+    TOP BAR
+=========================================*/
+
+.top-bar{
+
+    background:var(--negro);
+
+    color:white;
+
+    padding:10px 7%;
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    align-items:center;
+
+}
+
+.top-links{
+
+    display:flex;
+
+    gap:20px;
+
+}
+
+.top-links a{
+
+    font-size:.9rem;
+
+    transition:.3s;
+}
+
+.top-links a:hover{
+
+    color:#ffb1b1;
+
+}
+
+/*=========================================
+    LOGO
+=========================================*/
+
+.logo-container{
+
+    width:86%;
+
+    margin:auto;
+
+    padding:20px 0;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.logo-container h1{
+
+    font-size:2.3rem;
+
+    font-weight:900;
+
+    letter-spacing:2px;
+
+    color:var(--negro);
+
+}
+
+.menu-btn{
+
+    background:none;
+
+    border:none;
+
+    font-size:1.8rem;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    padding:5px 10px;
+
+}
+
+.menu-btn:hover{
+    color: #a3bd0f;
+}
+
+/*=========================================
+    NAV
+=========================================*/
+
+nav{
+
+    background:var(--rojo);
+
+}
+
+nav ul{
+
+    width:86%;
+
+    margin:auto;
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+}
+
+nav li{
+
+    transition:.3s;
+
+}
+
+nav li:hover{
+
+    background:var(--rojo-hover);
+
+}
+
+nav a{
+
+    display:block;
+
+    padding:15px 18px;
+
+    color:white;
+
+    font-weight:bold;
+
+    font-size:.95rem;
+
+}
+
+/*=========================================
+    MAIN
+=========================================*/
+
+main{
+
+    width:86%;
+
+    max-width:1400px;
+
+    margin:40px auto;
+
+}
+
+/*=========================================
+    TITULOS
+=========================================*/
+
+h2{
+
+    font-size:2rem;
+
+    margin-bottom:20px;
+
+}
+
+h3{
+
+    font-size:1.2rem;
+
+}
+
+p{
+
+    color:#555;
+
+}
+
+/*=========================================
+    BOTONES
+=========================================*/
+
+button{
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    opacity:.9;
+
+}
+
+/*=========================================
+    LINKS
+=========================================*/
+
+a{
+
+    transition:.3s;
+
+}
+
+a:hover{
+
+    color:var(--rojo);
+
+}
+
+/*=========================================
+    FOOTER
+=========================================*/
+
+footer{
+
+    background:#111;
+
+    color:white;
+
+    margin-top:80px;
+
+}
+
+.footer-grid{
+
+    width:86%;
+
+    max-width:1400px;
+
+    margin:auto;
+
+    padding:60px 0;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:50px;
+
+}
+
+.footer-grid h3{
+
+    margin-bottom:15px;
+
+}
+
+.footer-grid p{
+
+    color:#d5d5d5;
+
+}
+
+.footer-grid li{
+
+    margin-bottom:10px;
+
+}
+
+.footer-grid a{
+
+    color:#d5d5d5;
+
+}
+
+.footer-grid a:hover{
+
+    color:white;
+
+}
+
+.copyright{
+
+    border-top:1px solid #333;
+
+    padding:20px;
+
+    text-align:center;
+
+    color:#cfcfcf;
+
+    font-size:.9rem;
+
+}
+
+/*=========================================
+    UTILIDADES
+=========================================*/
+
+.container{
+
+    width:86%;
+
+    max-width:1400px;
+
+    margin:auto;
+
+}
+
+.text-center{
+
+    text-align:center;
+
+}
+
+.mt{
+
+    margin-top:40px;
+
+}
+
+.mb{
+
+    margin-bottom:40px;
+
+}
+
+/*=========================================
+    RESPONSIVE
+=========================================*/
+
+@media(max-width:992px){
+
+.logo-container{
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+.search input{
+
+width:100%;
+
+}
+
+.footer-grid{
+
+grid-template-columns:1fr 1fr;
+
+}
+
+}
+
+.menu-btn{
+    display:none;
+}
+
+@media (max-width:768px){
+
+    .menu-btn{
+        display:block;
+        background:none;
+        border:none;
+        font-size:30px;
+        cursor:pointer;
+        z-index:1001;
+    }
+
+    nav{
+
+        position:absolute;
+        top:100%;
+        left:0;
+
+        width:100%;
+
+        background:#a3bd0f;
+
+        overflow:hidden;
+
+        max-height:0;
+
+        opacity:0;
+
+        transition:
+        max-height .4s ease,
+        opacity .3s ease;
+
+    }
+
+    nav.active{
+
+        max-height:600px;
+
+        opacity:1;
+
+    }
+
+    nav ul{
+
+        flex-direction:column;
+
+        width:100%;
+
+    }
+
+    nav li{
+
+        width:100%;
+
+        border-bottom:1px solid rgba(255,255,255,.15);
+
+    }
+
+    nav a{
+
+        display:block;
+
+        padding:18px;
+
+        text-align:center;
+
+        color:white;
+
+    }
+
+}
+
+/*=================================
+    REDES FLOTANTES
+=================================*/
+
+.floating-social{
+
+    position:fixed;
+
+    right:25px;
+
+    bottom:25px;
+
+    z-index:9999;
+
+}
+
+.share-btn{
+
+    width:60px;
+
+    height:60px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#a3bd0f;
+
+    color:#fff;
+
+    cursor:pointer;
+
+    font-size:1.5rem;
+
+    box-shadow:0 10px 20px rgba(0,0,0,.25);
+
+    transition:.3s;
+
+}
+
+.share-btn:hover{
+
+    transform:scale(1.1);
+
+}
+
+.social-links{
+
+    display: flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+    margin-bottom:20px;
+
+    padding:10px;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transform:translateY(20px);
+
+    transition:.3s;
+
+}
+
+.social-links.active{
+
+    opacity:1;
+
+    visibility:visible;
+
+    transform:translateY(0);
+
+}
+
+.social-links a{
+
+    width:50px;
+
+    height:50px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:#fff;
+
+    font-size:1.3rem;
+
+    text-decoration:none;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.20);
+
+    transition:.3s;
+
+}
+
+.social-links a:hover{
+
+    transform:scale(1.1);
+
+}
+
+.whatsapp{
+
+    background:#25D366;
+
+}
+
+.instagram{
+
+    background:linear-gradient(
+        45deg,
+        #833AB4,
+        #FD1D1D,
+        #FCAF45
+    );
+
+}
+
+.facebook{
+
+    background:#1877F2;
+
+}
+
+nav ul li a.active {
+    color: #000000;
+    font-weight: bold;
+}
+
+nav ul li a.active::after {
+    width: 100%;
+}
+
+.menu-btn {
+    display: none;
+    background: transparent;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+
+    header {
+        position: relative;
+    }
+
+    .menu-btn {
+        display: block;
+        position: absolute;
+        left: 10px;
+        top: 75px;
+        z-index: 1000;
+    }
+
+}
+
+/* =========================
+BUSCADOR
+========================= */
+
+.search {
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.search input {
+    width: 230px;
+    padding: 10px 15px;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 14px;
+}
+
+.search input:focus {
+    border-color: #111;
+}
+
+
+@media(max-width:768px){
+
+    .search {
+        display: none;
+    }
+
+}

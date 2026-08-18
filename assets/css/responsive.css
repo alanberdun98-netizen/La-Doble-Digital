@@ -1,0 +1,67 @@
+/* =========================
+BUSCADOR RESPONSIVE
+========================= */
+
+.search {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.search input {
+    width: 250px;
+    padding: 10px 15px;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 14px;
+    transition: .3s;
+}
+
+.search input:focus {
+    border-color: #111;
+    box-shadow: 0 0 5px rgba(0,0,0,.2);
+}
+
+
+/* TABLET */
+
+@media (max-width: 1024px){
+
+    .search input {
+        width: 200px;
+    }
+
+}
+
+
+/* CELULAR */
+
+@media (max-width: 768px){
+
+    .search {
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+
+    .search input {
+        width: 90%;
+        max-width: 350px;
+    }
+
+}
+
+
+/* CELULARES CHICOS */
+
+@media (max-width: 480px){
+
+    .search input {
+        width: 95%;
+        font-size: 13px;
+        padding: 8px 12px;
+    }
+
+}
